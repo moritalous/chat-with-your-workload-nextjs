@@ -61,12 +61,6 @@ export const theme = createTheme({
         thumbHover: { value: '#a8b1b8' },
       },
     },
-    fonts: {
-      default: {
-        variable: { value: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' },
-        static: { value: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' },
-      },
-    },
     components: {
       card: {
         boxShadow: { value: '0 4px 6px {colors.overlays.black.5.value}' },
