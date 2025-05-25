@@ -122,6 +122,14 @@ backend.conversationHandler.resources.lambda.addToRolePolicy(
 );
 ```
 
+### 3. サインアップできるドメインを制限する
+
+[こちら](https://docs.amplify.aws/react/build-a-backend/functions/examples/email-domain-filtering/)のドキュメントを参考にしてください。
+
+
+### 4. セルフサインアップを無効にする
+
+[こちら](https://ui.docs.amplify.aws/react/connected-components/authenticator/configuration#hide-sign-up)のドキュメントを参考にしてください。
 ---
 
 # Chat with your Workload (English)
@@ -243,3 +251,11 @@ backend.conversationHandler.resources.lambda.addToRolePolicy(
   })
 );
 ```
+
+### 3. Restrict domains that can sign up
+
+Please refer to [this documentation](https://docs.amplify.aws/react/build-a-backend/functions/examples/email-domain-filtering/) for guidance.
+
+### 4. Disable self-signup
+
+Please refer to [this documentation](https://ui.docs.amplify.aws/react/connected-components/authenticator/configuration#hide-sign-up) for guidance.
