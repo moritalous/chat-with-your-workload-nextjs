@@ -1,0 +1,17 @@
+:root {
+  --app-breakpoint-xs: 480px;
+  --app-breakpoint-small: 576px;
+  --app-breakpoint-medium: 768px;
+  --app-breakpoint-large: 992px;
+  --app-breakpoint-xl: 1200px;
+  --app-breakpoint-xxl: 1400px;
+
+  --app-transitions-duration-fast: 0.1s;
+  --app-transitions-duration-medium: 0.2s;
+  --app-transitions-duration-slow: 0.3s;
+
+  --app-transitions-timing-ease: ease;
+  --app-transitions-timing-ease-in: ease-in;
+  --app-transitions-timing-ease-out: ease-out;
+  --app-transitions-timing-ease-in-out: ease-in-out;
+}

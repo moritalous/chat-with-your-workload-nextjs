@@ -1,0 +1,130 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.signout-button {
+  color: white;
+  text-decoration: none;
+  transition: color var(--app-transitions-duration-medium) var(--app-transitions-timing-ease);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.signout-button:hover {
+  background-color: var(--amplify-colors-overlays-white-10);
+  color: var(--amplify-colors-brand-primary-80);
+  text-decoration: none;
+}
+
+.amplify-ai-conversation__messages {
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.amplify-ai-conversation__message {
+  margin-bottom: 0.75rem;
+  margin-right: 4px;
+}
+
+.amplify-ai-conversation__message--user {
+  background-color: var(--amplify-colors-brand-primary-10);
+  border-radius: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.amplify-ai-conversation__message--assistant {
+  background-color: var(--amplify-colors-brand-secondary-10);
+  border-radius: 1.5rem 1.5rem 1.5rem 0;
+}
+
+.amplify-ai-conversation__message__content {
+  width: 100%;
+  padding: 0.75rem 1rem;
+}
+
+.amplify-ai-conversation__message__content pre {
+  background-color: var(--amplify-colors-brand-secondary-10);
+  color: var(--amplify-colors-brand-primary-100);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+}
+
+.amplify-ai-conversation__message__content code:not(pre code) {
+  background-color: var(--amplify-colors-overlays-orange-10);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  color: var(--amplify-colors-brand-primary-100);
+}
+
+.amplify-ai-conversation__form {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--amplify-colors-border-primary);
+  background-color: white;
+  align-items: center;
+}
+
+.amplify-ai-conversation__form textarea {
+  overflow-y: hidden;
+  resize: none;
+  border-radius: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--amplify-colors-border-primary);
+  box-shadow: 0 2px 5px var(--amplify-colors-overlays-black-5);
+  transition:
+    border-color var(--app-transitions-duration-medium) var(--app-transitions-timing-ease-in-out),
+    box-shadow var(--app-transitions-duration-medium) var(--app-transitions-timing-ease-in-out);
+}
+
+.amplify-ai-conversation__form textarea:focus {
+  border-color: var(--amplify-colors-brand-primary-80);
+  box-shadow: 0 0 0 3px var(--amplify-colors-overlays-orange-20);
+}
+
+.amplify-ai-conversation__form button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--amplify-colors-brand-primary-80);
+  color: white;
+  transition: background-color var(--app-transitions-duration-medium)
+    var(--app-transitions-timing-ease);
+}
+
+.amplify-ai-conversation__form button:hover {
+  background-color: var(--amplify-colors-brand-primary-90);
+}
+
+.amplify-ai-conversation__message__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+.amplify-ai-conversation__loading {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .amplify-ai-conversation__message {
+    max-width: 90%;
+  }
+
+  .amplify-ai-conversation__form {
+    padding: 0.5rem 0.75rem;
+  }
+}
