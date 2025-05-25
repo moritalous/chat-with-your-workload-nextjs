@@ -6,25 +6,24 @@ export const theme = createTheme({
     colors: {
       brand: {
         primary: {
-          10: { value: '#FFF8E6' }, // 薄いオレンジ
+          10: { value: '#FFF8E6' },
           20: { value: '#FFEBC0' },
           40: { value: '#FFDA8A' },
           60: { value: '#FFC455' },
-          80: { value: '#FF9900' }, // AWS オレンジ
-          90: { value: '#EC7211' }, // AWS オレンジ（濃い）
-          100: { value: '#D45B07' }, // AWS オレンジ（さらに濃い）
+          80: { value: '#FF9900' },
+          90: { value: '#EC7211' },
+          100: { value: '#D45B07' },
         },
         secondary: {
-          10: { value: '#F2F8FD' }, // 薄いブルー
+          10: { value: '#F2F8FD' },
           20: { value: '#D4E5F9' },
           40: { value: '#A8CCF5' },
           60: { value: '#7CB3F1' },
-          80: { value: '#0073BB' }, // AWS ライトブルー
-          90: { value: '#00A1C9' }, // AWS ライトブルー（明るい）
-          100: { value: '#232F3E' }, // AWS ダークブルー
+          80: { value: '#0073BB' },
+          90: { value: '#00A1C9' },
+          100: { value: '#232F3E' },
         },
       },
-      // 透明度を持つ色の定義
       overlays: {
         orange: {
           5: { value: 'rgba(255, 153, 0, 0.05)' },
@@ -52,9 +51,9 @@ export const theme = createTheme({
         secondary: { value: '#e9ecef' },
       },
       font: {
-        primary: { value: '#232F3E' }, // AWS ダークブルー
-        secondary: { value: '#545B64' }, // AWS グレー
-        tertiary: { value: '#687078' }, // AWS ライトグレー
+        primary: { value: '#232F3E' },
+        secondary: { value: '#545B64' },
+        tertiary: { value: '#687078' },
       },
       scrollbar: {
         track: { value: '#f1f3f5' },
@@ -88,11 +87,21 @@ export const theme = createTheme({
           _hover: {
             backgroundColor: { value: '{colors.brand.primary.90.value}' },
           },
+          _active: {
+            backgroundColor: { value: '{colors.brand.primary.90.value}' },
+          },
+          _focus: {
+            boxShadow: { value: '0 0 0 3px {colors.brand.primary.60.value}' },
+          },
         },
         link: {
           color: { value: '{colors.brand.secondary.100.value}' },
           _hover: {
             color: { value: '{colors.brand.primary.80.value}' },
+          },
+          _active: {
+            backgroundColor: { value: '{colors.brand.primary.10.value}' },
+            borderColor: { value: '{colors.brand.primary.80.value}' },
           },
         },
       },
