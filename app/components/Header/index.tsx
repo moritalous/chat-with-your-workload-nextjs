@@ -34,7 +34,7 @@ export const Header = () => {
         }}
         className="signout-button"
       >
-        サインアウト
+        Sign out
       </Button>
     </Flex>
   );
