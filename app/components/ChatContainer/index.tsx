@@ -5,6 +5,9 @@ import { Avatar, Card, Flex, View } from '@aws-amplify/ui-react';
 import { AIConversation } from '@aws-amplify/ui-react-ai';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
+import remarkBreaks from 'remark-breaks';
+import remarkGfm from 'remark-gfm';
+
 import './style.css';
 
 const welcomeMessage = `
@@ -66,7 +69,12 @@ export const ChatContainer = () => {
             handleSendMessage={handleSendMessage}
             messageRenderer={{
               text: ({ text }) => (
-                <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{text}</ReactMarkdown>
+                <ReactMarkdown
+                  remarkPlugins={[remarkBreaks, remarkGfm]}
+                  rehypePlugins={[rehypeHighlight]}
+                >
+                  {text}
+                </ReactMarkdown>
               ),
             }}
             avatars={{
@@ -82,7 +90,12 @@ export const ChatContainer = () => {
             displayText={{ getMessageTimestampText: () => '' }}
             welcomeMessage={
               <Card variation="outlined" borderRadius="medium" flex="1" overflow="hidden">
-                <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{welcomeMessage}</ReactMarkdown>
+                <ReactMarkdown
+                  remarkPlugins={[remarkBreaks, remarkGfm]}
+                  rehypePlugins={[rehypeHighlight]}
+                >
+                  {welcomeMessage}
+                </ReactMarkdown>
               </Card>
             }
           />
